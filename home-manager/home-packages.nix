@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }:
+{
   nixpkgs.config.allowUnfree = true;
   fonts.fontconfig.enable = true;
 
@@ -15,6 +16,7 @@
     wofi
 
     # CLI apps
+    inputs.nixvim-config.packages.${pkgs.system}.default
     bc
     brightnessctl
     cliphist

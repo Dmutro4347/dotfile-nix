@@ -6,7 +6,6 @@
     ./kitty.nix
     ./waybar
     ./ranger.nix
-    ./nixvim
     ./wofi
     ./tmux.nix
     ./stylix.nix

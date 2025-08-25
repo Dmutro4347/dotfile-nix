@@ -71,16 +71,6 @@
       bind Q kill-window
       bind e kill-session
 
-      # --- Clipboard integration ---
-      if -b 'command -v wl-copy > /dev/null 2>&1' \
-        'bind y run -b "tmux save-buffer - | wl-copy"'
-      if -b 'command -v xclip > /dev/null 2>&1' \
-        'bind y run -b "tmux save-buffer - | xclip -i -selection clipboard"'
-      if -b 'command -v pbcopy > /dev/null 2>&1' \
-        'bind y run -b "tmux save-buffer - | pbcopy"'
-      if -b 'command -v clip.exe > /dev/null 2>&1' \
-        'bind y run -b "tmux save-buffer - | clip.exe"'
-
       # --- Buffers ---
       bind b list-buffers
       bind p paste-buffer -p

@@ -14,7 +14,7 @@
         font_size = 96;
         font_family = "JetBrains Mono";
         color = "rgba(235, 219, 178, 1.0)";
-        position = "0, 600";
+        position = "0, 300";
         halign = "center";
         walign = "center";
 
@@ -31,7 +31,7 @@
 
       input-field = [
         {
-          size = "200, 50";
+          size = "250, 60";
           position = "0, -80";
           monitor = "";
           dots_center = true;
@@ -39,8 +39,22 @@
           inner_color = "rgb(40, 40, 40)";
           outer_color = "rgb(60, 56, 54)";
           outline_thickness = 5;
-          placeholder_text = "password";
+          placeholder_text = "password baka";
+          fail_text = "KURWA WRONG!!";
           shadow_passes = 1;
+        }
+      ];
+      image = [
+        {
+          monitor = "";
+          path = "$HOME/Pictures/ava.jpg";
+          size = 200;
+          halign = "center";
+          walign = "center";
+          border_size = 2;
+          rounding = 100;
+          position = "0, -20";
+
         }
       ];
     };
