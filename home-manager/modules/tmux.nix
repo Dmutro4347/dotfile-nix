@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   programs.tmux = {
     enable = true;
     baseIndex = 1;
@@ -25,15 +26,16 @@
       setw -g automatic-rename on
       set -sg repeat-time 600
       set -s focus-events on
+      set-option -g set-clipboard on
 
       # --- Copy mode (vi) ---
       setw -g mode-keys vi
-      bind -T copy-mode-vi v send -X begin-selection
-      bind -T copy-mode-vi C-v send -X rectangle-toggle
-      bind -T copy-mode-vi y send -X copy-selection-and-cancel
-      bind -T copy-mode-vi Escape send -X cancel
-      bind -T copy-mode-vi H send -X start-of-line
-      bind -T copy-mode-vi L send -X end-of-line
+      # bind -T copy-mode-vi v send-keys -X begin-selection
+      # bind -T copy-mode-vi C-v send-keys -X rectangle-toggle
+      # bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel "wl-copy"
+      # bind -T copy-mode-vi Escape send-keys -X cancel
+      # bind -T copy-mode-vi H send-keys -X start-of-line
+      # bind -T copy-mode-vi L send-keys -X end-of-line
 
       # --- Reload config ---
       bind r source-file ~/.config/tmux/tmux.conf \; display "Reloaded!"
@@ -76,6 +78,11 @@
       bind p paste-buffer -p
       bind P choose-buffer
       
+      
+      # --- Mouse ---
+      bind m set -g mouse \; \
+      display-message "Mouse mode: #{?mouse,on,off}"
+
       # --- Bar ---
       set -g status-justify centre
       set -g status-left-length 40
