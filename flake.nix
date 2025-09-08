@@ -8,7 +8,6 @@
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     nixvim-config = {
       url="github:Dmutro4347/nixvim-config";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +24,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, nixvim-config, minegrub-theme, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, minegrub-theme, nixvim-config, ... }@inputs:
     let
       system = "x86_64-linux";
       homeStateVersion = "25.05";
@@ -57,7 +56,7 @@
           })
         { }
         hosts;
-
+    
       homeConfigurations.${user} = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.${system};
         modules = [

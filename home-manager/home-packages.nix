@@ -17,6 +17,9 @@
 
     # CLI apps
     inputs.nixvim-config.packages.${pkgs.system}.default
+    pinentry-curses
+    tmuxinator
+    gnupg
     bc
     brightnessctl
     cliphist
@@ -30,7 +33,9 @@
     ntfs3g
     pass
     playerctl
-    python3
+    python312
+    python312Packages.virtualenv
+    python312Packages.pip
     qemu
     ranger
     ripgrep

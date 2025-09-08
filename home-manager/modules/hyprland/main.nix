@@ -6,7 +6,7 @@
         # Hint Electron apps to use Wayland
         "XCURSOR_THEME,DMZ-Black"
         "XCURSOR_SIZE,24"
-        "XDG_SCREENSHOTS_DIR,$HOME/screens"
+        "XDG_SCREENSHOTS_DIR,$HOME/Pictures/screens"
 
       ];
       monitor = ",1920x1080@60,auto,1";
