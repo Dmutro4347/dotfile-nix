@@ -11,6 +11,7 @@
         "networkmanager"
         "input"
         "docker"
+        "dockerd"
         "kvm"
         "libvirtd"
       ];

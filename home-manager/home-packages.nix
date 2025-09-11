@@ -4,49 +4,55 @@
   fonts.fontconfig.enable = true;
 
   home.packages = with pkgs; [
-    # GUI apps
+    # Code / Dev
+    gcc
+    git
+    grc
+    inputs.nixvim-config.packages.${pkgs.system}.default
     jetbrains.pycharm-professional
+    ranger
+    tmux
+    tmuxinator
+    tree
+    docker
+
+    # Hyprland / WM
+    brightnessctl
+    cliphist
+    grimblast
+    playerctl
+    slurp
+    swww
+    waypaper
+    wl-clipboard
+    wofi
+
+    # System / CLI utils
+    bc
+    gnupg
+    htop
+    jq
+    killall
+    microfetch
+    ntfs3g
+    pass
+    pinentry-curses
+    unzip
+    wget
+    qemu
+    ripgrep
+
+    # Python
+    python312
+    python312Packages.pip
+    python312Packages.virtualenv
+
+    # GUI apps
     kitty
     obsidian
     pavucontrol
     spotify
     telegram-desktop
     virt-manager
-    waypaper
-    wofi
-
-    # CLI apps
-    inputs.nixvim-config.packages.${pkgs.system}.default
-    pinentry-curses
-    tmuxinator
-    gnupg
-    bc
-    brightnessctl
-    cliphist
-    docker
-    gcc
-    git
-    grc
-    htop
-    killall
-    microfetch
-    ntfs3g
-    pass
-    playerctl
-    python312
-    python312Packages.virtualenv
-    python312Packages.pip
-    qemu
-    ranger
-    ripgrep
-    slurp
-    swww
-    tmux
-    tree
-    unzip
-    wget
-    jq
-    wl-clipboard
-    grimblast
   ];
 }

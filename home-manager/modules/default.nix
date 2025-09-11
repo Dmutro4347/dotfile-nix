@@ -11,7 +11,7 @@
     ./stylix.nix
     ./wlogout
     ./lazygit.nix
-    # ./nvchad
+    ./tmuxinator.nix
     # ./starship.nix
   ];
 }

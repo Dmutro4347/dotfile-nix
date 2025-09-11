@@ -1,4 +1,5 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
   imports = [ inputs.stylix.homeManagerModules.stylix ];
 
   home.packages = with pkgs; [
@@ -12,6 +13,7 @@
     powerline-fonts
     powerline-symbols
     nerd-fonts.jetbrains-mono
+    monocraft
   ];
 
   stylix = {
@@ -34,7 +36,6 @@
       size = 24;
       package = pkgs.vanilla-dmz;
     };
-
     fonts = {
       emoji = {
         name = "Noto Color Emoji";
@@ -42,7 +43,9 @@
       };
       monospace = {
         name = "JetBrains Mono";
+        # name = "Monocraft Nerd Font";
         package = pkgs.jetbrains-mono;
+        # package = pkgs.monocraft;
       };
       sansSerif = {
         name = "Noto Sans";

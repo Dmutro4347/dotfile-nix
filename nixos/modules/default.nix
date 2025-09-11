@@ -16,5 +16,8 @@
     ./greetd.nix
     ./nh.nix
     ./autoupdate.nix
+    ./docker.nix
+    ./libvirt.nix
+    ./postgres.nix
   ];
 }
